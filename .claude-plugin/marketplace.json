@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "brazilayer",
+  "owner": { "name": "Brazilayer", "email": "contato@brazilayer.com" },
+  "metadata": { "description": "Agent skills by Brazilayer and the Agent Economy Report: trust checks for x402 services and agent skills, Brazilian company (CNPJ) verification." },
+  "plugins": [
+    {
+      "name": "agent-trust",
+      "source": "./",
+      "description": "Check the trust rating of any x402 service before paying it and of any agent skill before installing it. Free JSON, daily, sybil-resistant. Also bundles brazil-kyb (Brazilian company verification via x402).",
+      "author": { "name": "Brazilayer" },
+      "homepage": "https://agenteconomy.report/s/",
+      "repository": "https://github.com/brazilayer/agent-skills",
+      "license": "MIT-0",
+      "category": "security",
+      "tags": ["x402", "trust", "rating", "security", "skills", "brazil", "kyb"],
+      "keywords": ["x402", "trust", "rating", "security", "skills", "brazil", "kyb", "cnpj"]
+    }
+  ]
+}
