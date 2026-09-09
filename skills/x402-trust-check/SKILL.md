@@ -1,7 +1,7 @@
 ---
 name: x402-trust-check
 description: Check the trust rating of any x402 service before paying it, and of any skill before installing it. Free JSON, daily, sybil-resistant.
-version: 1.2.0
+version: 1.3.0
 homepage: https://agenteconomy.report/s/
 metadata:
   openclaw:
@@ -101,6 +101,18 @@ Fields: `tier` (same scale, trust line BBB), `outlook`, `flags` (`SUSPICIOUS`, `
 install; `UNKNOWN_PAYEE`, `PIPE_SHELL` or `OBFUSCATED`: show the flag to the user and ask;
 `KEYS`: say it handles keys and ask; 404: skill not indexed, treat as unknown. Paid record with
 the same fields: `GET https://agenteconomy.report/api/skill/<slug>` (US$ 0.005).
+
+Some skills also have a **code audit** (the package itself was read, file by file):
+
+```bash
+curl -s https://agenteconomy.report/k/<slug>.audit.json
+```
+
+`verdict` is `SAFE`, `CAUTION` or `UNSAFE`; `findings` are each tied to a file and a line;
+`version` says which release was audited. `UNSAFE`: do not install. `CAUTION`: show the findings
+to the user. 404: no audit yet; the rating above still applies. The list of audited skills is at
+`https://agenteconomy.report/k/audited`; a new audit can be commissioned for US$ 29 via x402 at
+`GET https://agenteconomy.report/api/audit/<slug>`.
 
 ## 7. Report back
 
