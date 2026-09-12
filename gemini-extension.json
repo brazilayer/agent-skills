@@ -1,6 +1,6 @@
 {
   "name": "agent-trust",
-  "version": "1.3.0",
-  "description": "Check the trust rating of any x402 service before paying it and of any agent skill before installing it (Agent Economy Report). Includes brazil-kyb (Brazilian company verification via x402).",
+  "version": "1.4.0",
+  "description": "Check the trust rating of any x402 service before paying it of any agent skill before installing it, and the conduct rating of any agent before delegating to it (Agent Economy Report); x402-conduct-test runs the conduct arena. Includes brazil-kyb (Brazilian company verification via x402).",
   "contextFileName": "GEMINI.md"
 }

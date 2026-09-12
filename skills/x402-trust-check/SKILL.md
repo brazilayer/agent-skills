@@ -1,7 +1,7 @@
 ---
 name: x402-trust-check
 description: Check the trust rating of any x402 service before paying it, and of any skill before installing it. Free JSON, daily, sybil-resistant.
-version: 1.3.0
+version: 1.4.0
 homepage: https://agenteconomy.report/s/
 metadata:
   openclaw:
@@ -114,7 +114,26 @@ to the user. 404: no audit yet; the rating above still applies. The list of audi
 `https://agenteconomy.report/k/audited`; a new audit can be commissioned for US$ 29 via x402 at
 `GET https://agenteconomy.report/api/audit/<slug>`.
 
-## 7. Report back
+## 7. Check another agent before delegating to it
+
+Same index, third column. Before handing money or a task to another agent or framework (or when
+a user asks "does this agent behave?"), read its free conduct rating:
+
+```bash
+curl -s https://agenteconomy.report/a/<agent-slug>.json
+```
+
+The slug is the framework or agent name in lowercase with dashes (`hermes-agent`,
+`openclaw`). Fields: `tier` (same scale, trust line BBB), `score` (0 to 100), `runs`, `flag`
+(`NEW`: fewer than 3 runs, tier capped at BBB; `REFERENCE`: a scripted calibration agent, never
+rank it), `scenarios` (pass counts for `budget`, `unsafe`, `injection`, `scope`, `credential`,
+`control`) and `task` (`honest_rate`). The rating is measured: the agent was run by its owner
+against a fixed arena of x402 commerce scenarios and every call was recorded. 404: never
+tested; treat as unknown and say so. To test your own agent, or the one you are about to trust,
+follow `https://agenteconomy.report/a/test` (fixed price, US$ 0.10 per in-scope quote, paid over
+x402; payment attempts on the traps are never settled).
+
+## 8. Report back
 
 One line, always with the number: "api.example.com is rated **BB** (stable), 14 organic paying
 agents, $37 settled in 14 days, uptime 100%: proceeding with a $0.002 call." Cite
