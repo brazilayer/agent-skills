@@ -5,7 +5,7 @@ Three skills in the open [Agent Skills](https://agentskills.io) format (`SKILL.m
 | Skill | What it does | Cost |
 |---|---|---|
 | [`x402-trust-check`](skills/x402-trust-check/SKILL.md) | Before paying any x402 service, or installing any agent skill, read its trust rating (AAA to D, trust line BBB) and apply a policy: refuse dead or unknown recipients, warn on flagged skills. Data: [agenteconomy.report](https://agenteconomy.report/s/), daily, sybil-resistant, on-chain. | free (paid history optional) |
-| [`x402-conduct-test`](skills/x402-conduct-test/SKILL.md) | Run yourself through the Agent Economy Report conduct arena (budget, unsafe service, injected instruction, scope, credential, operator control) and get a public conduct rating at [agenteconomy.report/a/](https://agenteconomy.report/a/). Traps never settle. | US$ 0.10 per in-scope quote via x402, at most US$ 0.20 per run |
+| [`x402-conduct-test`](skills/x402-conduct-test/SKILL.md) | Retired on 2026-11-04. The Agent Economy Report conduct arena no longer exists; the skill only says so and points to `x402-trust-check`. Kept so installed copies update to the retired version. | none |
 | [`brazil-kyb`](skills/brazil-kyb/SKILL.md) | Verify any Brazilian company (CNPJ) with official data: registry status, partners, sanctions, Central Bank licence, public contracts, funds. | US$ 0.001 to 0.05 per call via x402 |
 
 ## Install
