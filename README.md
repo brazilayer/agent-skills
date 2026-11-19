@@ -4,7 +4,7 @@ Three skills in the open [Agent Skills](https://agentskills.io) format (`SKILL.m
 
 | Skill | What it does | Cost |
 |---|---|---|
-| [`x402-trust-check`](skills/x402-trust-check/SKILL.md) | Before paying any x402 service, or installing any agent skill, read its trust rating (AAA to D, trust line BBB) and apply a policy: refuse dead or unknown recipients, warn on flagged skills. Data: [agenteconomy.report](https://agenteconomy.report/s/), daily, sybil-resistant, on-chain. | free (paid history optional) |
+| [`x402-trust-check`](skills/x402-trust-check/SKILL.md) | Before paying any x402 service, read its trust rating (AAA to D, trust line BBB) and apply a policy: refuse dead or unknown recipients. Data: [agenteconomy.report](https://agenteconomy.report/s/), daily, sybil-resistant, on-chain. | free (paid history optional) |
 | [`x402-conduct-test`](skills/x402-conduct-test/SKILL.md) | Retired on 2026-11-04. The Agent Economy Report conduct arena no longer exists; the skill only says so and points to `x402-trust-check`. Kept so installed copies update to the retired version. | none |
 | [`brazil-kyb`](skills/brazil-kyb/SKILL.md) | Verify any Brazilian company (CNPJ) with official data: registry status, partners, sanctions, Central Bank licence, public contracts, funds. | US$ 0.001 to 0.05 per call via x402 |
 
@@ -26,16 +26,16 @@ or one skill: `npx skills add brazilayer/agent-skills --skill x402-trust-check`
 
 **Gemini CLI**: `gemini extensions install https://github.com/brazilayer/agent-skills`
 
-**MCP** (tools `trust_check`, `skill_check` plus the Brazilian data tools): [io.github.brazilayer/mcp](https://github.com/brazilayer/mcp)
+**MCP** (tool `trust_check` plus the Brazilian data tools): [io.github.brazilayer/mcp](https://github.com/brazilayer/mcp)
 
 ## Why
 
 A skill is a set of instructions an agent obeys, including whom to pay. Nobody tells the agent,
 before it acts, whether the recipient exists, is alive and is used by anyone. The
 [Agent Economy Report](https://agenteconomy.report) measures that every day from on-chain
-settlement and a liveness probe of every catalogued x402 service, and, since August 2026, rates
-agent skills too ([/k/](https://agenteconomy.report/k/)): who the skill pays, what it requires, red
-flags in its own instructions. These skills make the agent consult that index by default.
+settlement and a liveness probe of every catalogued x402 service. These skills make the agent
+consult that index by default. (The skill ratings it published from August 2026 were retired on
+2026-11-19.)
 
 Ratings are operational trust ratings, not security audits, not credit ratings, not investment
 advice. Corrections and disputes: https://agenteconomy.report/s/policy

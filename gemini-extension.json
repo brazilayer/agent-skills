@@ -1,6 +1,6 @@
 {
   "name": "agent-trust",
-  "version": "1.5.0",
-  "description": "Check the trust rating of any x402 service before paying it and of any agent skill before installing it (Agent Economy Report). Includes brazil-kyb (Brazilian company verification via x402). x402-conduct-test is retired (2026-11-04).",
+  "version": "1.6.0",
+  "description": "Check the trust rating of any x402 service before paying it (Agent Economy Report). Includes brazil-kyb (Brazilian company verification via x402). x402-conduct-test is retired (2026-11-04); the skill ratings were retired on 2026-11-19.",
   "contextFileName": "GEMINI.md"
 }

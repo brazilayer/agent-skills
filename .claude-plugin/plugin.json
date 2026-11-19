@@ -1,7 +1,7 @@
 {
   "name": "agent-trust",
-  "version": "1.1.0",
-  "description": "Check the trust rating of any x402 service before paying it and of any agent skill before installing it (Agent Economy Report, free JSON, daily). Includes brazil-kyb: verify Brazilian companies (CNPJ) with official data via x402.",
+  "version": "1.2.0",
+  "description": "Check the trust rating of any x402 service before paying it (Agent Economy Report, free JSON, daily). Includes brazil-kyb: verify Brazilian companies (CNPJ) with official data via x402.",
   "author": { "name": "Brazilayer", "email": "contato@brazilayer.com", "url": "https://www.brazilayer.com" },
   "homepage": "https://agenteconomy.report/s/",
   "repository": "https://github.com/brazilayer/agent-skills",
